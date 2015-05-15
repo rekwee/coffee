@@ -1,0 +1,166 @@
+/*Comment in CSS - IGNORED by the browser */
+@import url(http://fonts.googleapis.com/css?family=Roboto:500,300,700,400);
+
+/*select the content on the page using the tag name*/
+
+body {
+	/*add some style rules */
+	/*background:#EFF8F4;*/
+
+	font-family: 'Roboto', Arial, sans-serif; 
+	line-height: 1.8; 
+	color: #585858;
+	font-size:16px;
+	text-align: center; 
+}
+
+
+
+header {
+		background-image: url(../images/splash.png);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		padding: 200px  0 200px 0;
+
+}
+nav {
+
+	background-color: #FFDA0D;
+	/*top right bottom left*/
+	padding: 20px 0 20px 0;
+
+}
+/*this is only the anchor tags within the nav tag*/
+nav a {
+/*capitalise everything*/
+text-transform: uppercase;
+
+/*make links bold*/
+font-weight: 700;
+
+/*add some space*/
+padding: 0 20px 0 20px;
+
+/*remove underline + change color*/
+text-decoration: none;
+color: #444444;
+
+}
+
+nav a:hover {
+
+	/*only happens when hovering */
+	color: #585858;
+	text-decoration: underline;
+
+}
+
+section {
+
+	/*display: inline;*/
+	/*sections cannot be text aligned */
+	/*margin pushes the tag away from other things*/
+	/*padding squeezes from the inside*/
+
+
+	margin: 50px auto 50px auto;
+	width: 720px;	
+	/*background-color: #FFDA0D;*/
+
+}
+
+	/*rules for heading 2 and heading 3 */
+	h2 {
+		font-size: 35px;
+		text-transform: uppercase;
+		margin: 40px 0 0 0;
+
+	}
+	h3 {
+		text-transform: uppercase;
+		margin: 0 0 20px 0px;
+
+		/*margin bottom pushes the things below away*/
+	}
+
+
+	p, blockquote {font-size: 22px;
+		margin: 20px 40px 20px 40px;
+		font-weight: 300;
+
+	}
+
+/*style quote section - based on their class*/
+/* . represents this is a class*/
+
+.customer {
+	background-color: #FFDA0D;
+}
+
+footer {
+	padding: 40px 0 40px;
+	background-color: #FFDA0D;
+}
+
+
+img {
+
+	margin: 0 0 20px 0;
+}
+.menu-trigger {
+	display: none;
+}
+
+/*media query - adds some responsive rules */
+/*media pring -  if someone wants to print*/
+
+@media screen and (max-width: 720px) {
+	header {
+		/*reduce the padding so the header is not so large*/
+		padding: 100px 20px 100px 20px;
+	}
+	section {
+		width: auto;
+		/*never go larger than 90% of the available width*/
+		max-width: 90%
+	}
+	img, iframe {
+		/*stop breaking images out of the sections*/
+
+		max-width: 100%;
+	}
+	p{
+		font-size: 16px;
+	}
+	nav {
+		display: none;
+		/*hide the menu for mobile screens*/
+	}
+
+	nav a {
+		display: block;
+}
+	h2 {
+		font-size:24px;
+
+	}
+	blockquote {
+		font-size: 18px;
+	}
+	.customer {
+		max-width: 100%;
+	}
+	.menu-trigger {
+		display: inline;
+		position: absolute;
+		/*position absolute will make coordinate system work*/
+
+		/*position using coordinate type system - using top bottom right left*/
+		top: 20px;
+		right: 20px;
+	}
+
+
+}
+
